@@ -284,29 +284,29 @@ nav {
 }
 
 .slide:nth-child(1) .slide__inner {
-  background-image: url('/imges/tw-img-hero-web-flighthotel-.jpg');
+  background-image: url('tw-img-hero-web-flighthotel-.jpg');
 }
 
 .slide:nth-child(2) .slide__inner {
-  background-image: url('/imges/tw-img-hero-web-referral.jpg');
+  background-image: url('tw-img-hero-web-referral.jpg');
 }
 
 .slide:nth-child(3) .slide__inner {
-  background-image: url('/imges/tw-img-hero-web-travelbookings.png');
+  background-image: url('tw-img-hero-web-travelbookings.png');
 }
 
 .slide:nth-child(4) .slide__inner {
-  background-image: url('/imges/tw-img-hero-web-twplus-mkt.jpg');
+  background-image: url('tw-img-hero-web-twplus-mkt.jpg');
 }
 
 .slide:nth-child(5) .slide__inner {
-  background-image: url('/imges/tw-img-hero-web_socialmedia.png');
+  background-image: url('tw-img-hero-web_socialmedia.png');
 }
 .slide:nth-child(6) .slide__inner {
-  background-image: url('/imges/tw_img_lp_giftcard.png');
+  background-image: url('tw_img_lp_giftcard.png');
 }
 .slide:nth-child(7) .slide__inner {
-  background-image: url('/imges/tw_img_home_category_apartment.jpg');
+  background-image: url('tw_img_home_category_apartment.jpg');
 }
 
 .slide__inner {
