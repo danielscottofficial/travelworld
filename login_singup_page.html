@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login And Signup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+input {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.forms-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.signin-signup {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 75%;
+  width: 50%;
+  transition: 1s 0.7s ease-in-out;
+  display: grid;
+  grid-template-columns: 1fr;
+  z-index: 5;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0rem 5rem;
+  transition: all 0.2s 0.7s;
+  overflow: hidden;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+form.sign-up-form {
+  opacity: 0;
+  z-index: 1;
+}
+
+form.sign-in-form {
+  z-index: 2;
+}
+
+.title {
+  font-size: 2.2rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.input-field {
+  max-width: 380px;
+  width: 100%;
+  background-color: #f0f0f0;
+  margin: 10px 0;
+  height: 55px;
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+  position: relative;
+}
+
+.input-field i {
+  text-align: center;
+  line-height: 55px;
+  color: #acacac;
+  transition: 0.5s;
+  font-size: 1.1rem;
+}
+
+.input-field input {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.input-field input::placeholder {
+  color: #aaa;
+  font-weight: 500;
+}
+
+.social-text {
+  padding: 0.7rem 0;
+  font-size: 1rem;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon {
+  height: 46px;
+  width: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.45rem;
+  color: #333;
+  border-radius: 50%;
+  border: 1px solid #333;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+.social-icon:nth-child(1):hover {
+    color: #316FF6;
+    border-color: #316FF6;
+}
+
+.social-icon:nth-child(2):hover {
+    color: #1DA1F2;
+    border-color: #1DA1F2;
+}
+
+.social-icon:nth-child(3):hover {
+    background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+    background-clip: text;
+    color: transparent;
+    border-radius: 50%;
+}
+
+.social-icon:nth-child(4):hover {
+    color: #0077b5;
+    border-color: #0077b5;
+}
+
+
+
+.btn {
+  width: 150px;
+  background-color: #5995fd;
+  border: none;
+  outline: none;
+  height: 49px;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: #4d84e2;
+}
+.panels-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.container:before {
+  content: "";
+  position: absolute;
+  height: 2000px;
+  width: 2000px;
+  top: -10%;
+  right: 48%;
+  transform: translateY(-50%);
+  background-image: linear-gradient(-45deg, #4481eb 0%, #04befe 100%);
+  transition: 1.8s ease-in-out;
+  border-radius: 50%;
+  z-index: 6;
+}
+
+.image {
+  width: 100%;
+  transition: transform 1.1s ease-in-out;
+  transition-delay: 0.4s;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  text-align: center;
+  z-index: 6;
+}
+
+.left-panel {
+  pointer-events: all;
+  padding: 3rem 17% 2rem 12%;
+}
+
+.right-panel {
+  pointer-events: none;
+  padding: 3rem 12% 2rem 17%;
+}
+
+.panel .content {
+  color: #fff;
+  transition: transform 0.9s ease-in-out;
+  transition-delay: 0.6s;
+}
+
+.panel h3 {
+  font-weight: 600;
+  line-height: 1;
+  font-size: 1.5rem;
+}
+
+.panel p {
+  font-size: 0.95rem;
+  padding: 0.7rem 0;
+}
+
+.btn.transparent {
+  margin: 0;
+  background: none;
+  border: 2px solid #fff;
+  width: 130px;
+  height: 41px;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.right-panel .image,
+.right-panel .content {
+  transform: translateX(800px);
+}
+.forgot{
+    display: block;
+    margin-left: 231px;
+    text-decoration: none;
+    color: black;
+}
+
+.forgot:hover{
+    color: #5995fd;
+}
+/* ANIMATION */
+
+.container.sign-up-mode:before {
+  transform: translate(100%, -50%);
+  right: 52%;
+}
+
+.container.sign-up-mode .left-panel .image,
+.container.sign-up-mode .left-panel .content {
+  transform: translateX(-800px);
+}
+
+.container.sign-up-mode .signin-signup {
+  left: 25%;
+}
+
+.container.sign-up-mode form.sign-up-form {
+  opacity: 1;
+  z-index: 2;
+}
+
+.container.sign-up-mode form.sign-in-form {
+  opacity: 0;
+  z-index: 1;
+}
+
+.container.sign-up-mode .right-panel .image,
+.container.sign-up-mode .right-panel .content {
+  transform: translateX(0%);
+}
+
+.container.sign-up-mode .left-panel {
+  pointer-events: none;
+}
+
+.container.sign-up-mode .right-panel {
+  pointer-events: all;
+}
+
+
+@media (max-width: 870px) {
+  .container {
+    min-height: 800px;
+    height: 100vh;
+  }
+  .signin-signup {
+    width: 100%;
+    top: 95%;
+    transform: translate(-50%, -100%);
+    transition: 1s 0.8s ease-in-out;
+  }
+
+  .signin-signup,
+  .container.sign-up-mode .signin-signup {
+    left: 50%;
+  }
+
+  .panels-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+  }
+
+  .panel {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2.5rem 8%;
+    grid-column: 1 / 2;
+  }
+
+  .right-panel {
+    grid-row: 3 / 4;
+  }
+
+  .left-panel {
+    grid-row: 1 / 2;
+  }
+
+  .image {
+    width: 200px;
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.6s;
+  }
+
+  .panel .content {
+    padding-right: 15%;
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.8s;
+  }
+
+  .panel h3 {
+    font-size: 1.2rem;
+  }
+
+  .panel p {
+    font-size: 0.7rem;
+    padding: 0.5rem 0;
+  }
+
+  .btn.transparent {
+    width: 110px;
+    height: 35px;
+    font-size: 0.7rem;
+  }
+
+  .container:before {
+    width: 1500px;
+    height: 1500px;
+    transform: translateX(-50%);
+    left: 30%;
+    bottom: 68%;
+    right: initial;
+    top: initial;
+    transition: 2s ease-in-out;
+  }
+
+  .container.sign-up-mode:before {
+    transform: translate(-50%, 100%);
+    bottom: 32%;
+    right: initial;
+  }
+
+  .container.sign-up-mode .left-panel .image,
+  .container.sign-up-mode .left-panel .content {
+    transform: translateY(-300px);
+  }
+
+  .container.sign-up-mode .right-panel .image,
+  .container.sign-up-mode .right-panel .content {
+    transform: translateY(0px);
+  }
+
+  .right-panel .image,
+  .right-panel .content {
+    transform: translateY(300px);
+  }
+
+  .container.sign-up-mode .signin-signup {
+    top: 5%;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media (max-width: 570px) {
+  form {
+    padding: 0 1.5rem;
+  }
+
+  .image {
+    display: none;
+  }
+  .panel .content {
+    padding: 0.5rem 1rem;
+  }
+  .container {
+    padding: 1.5rem;
+  }
+
+  .container:before {
+    bottom: 72%;
+    left: 50%;
+  }
+
+  .container.sign-up-mode:before {
+    bottom: 28%;
+    left: 50%;
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="#" class="sign-in-form" id="login_form">
+            <h2 class="title">Login</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text"id="login_user_name" required placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="login_user_password" required placeholder="Password" /> 
+            </div>
+            <span><a href="" class="forgot">Forget Password?
+            </span>
+            <input type="submit" value="Login" class="btn solid " />
+            <p class="social-text">Or Login with social platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+              <a href="#" class="social-icon">
+              <i class="fa-brands fa-telegram"></i>
+            </a>
+            </div>
+          </form>
+          <form action="#" class="sign-up-form" id="register_form">
+            <h2 class="title">Registration</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" required id="username" name="username" placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" required id="email" name="email" placeholder="Email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address">
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" required id="password" name="password" placeholder="Password" minlength="6" maxlength="20" pattern=".*(?=.*[a-zA-Z])(?=.*\d).*" title="Password must be at least 6 characters long and contain at least one letter and one number"/>
+            </div>
+            <div class="input-field">
+              <i class="fa fa-user-plus"></i>
+              <input type="text" required id="invitation" name="invitation-code" placeholder="Please enter your invitation code" title="Please enter a valid invitation code"/>
+            </div>
+            <a href="" class="not-invitation_code forgot">
+              I don't have invitation code?
+              <i class="fa fa-arrow-right"></i>
+            </a>
+            <div class="input-field">
+              <i class="fas fa-phone"></i>
+              <input type="text" required id="phone" name="phone" placeholder="Phone Number" minlength="5" maxlength="15" pattern="[0-9]+" title="Please enter a valid phone number (only digits)">
+            </div>
+            <input type="submit" class="btn" value="Sign up" />
+            <p class="social-text">Or Registration with social platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+              <a href="#" class="social-icon">
+              <i class="fa-brands fa-telegram"></i>
+            </a>
+            </div>
+          </form>          
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>New here ?</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
+              ex ratione. Aliquid!
+            </p>
+            <button class="btn transparent" id="sign-up-btn">
+             Registration
+            </button>
+          </div>
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>One of us ?</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+              laboriosam ad deleniti.
+            </p>
+            <button class="btn transparent" id="sign-in-btn">
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"; 
+import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js"; 
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js"; 
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDucSqdWcXue8zzDkeI5kLthceHcqPmB18",
+  authDomain: "travel-world-official.firebaseapp.com",
+  projectId: "travel-world-official",
+  storageBucket: "travel-world-official.appspot.com",
+  messagingSenderId: "G-VMZYEQSEH8",
+  appId: "1:315013253475:web:23b68035e92361736c2b56",
+  measurementId: "G-VMZYEQSEH8"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+auth.languageCode = 'en';
+const database = getDatabase();
+const dbRef = ref(database);
+
+
+let register_form = document.getElementById('register_form');
+let email = document.getElementById('email');
+let password = document.getElementById('password');
+let phone = document.getElementById('phone');
+let invitation = document.getElementById('invitation');
+let username = document.getElementById('username');
+let login_form = document.getElementById('login_form');
+let login_email = document.getElementById('login_user_name');
+let login_password = document.getElementById('login_user_password');
+
+// Define an array of valid invitation codes
+const validInvitationCodes = ["m1hXBnRC2VU1iVp2seQ7", "FO61gUAZ459byIilfVFi", "NL9jZPekKc9wMNRrDZRp", "mefuOLntHPp163FGc5uh", "Ie2GONYK7ti3UjGs1IAx", "l8I0BpP6XYK8yZYVJaCW", "eNkWDm6LX0MFPpdldrh2", "rQUdYxbRszbgZtfFVHyS", "UhbmpLpwmCVs4jEyys4I", "InhrOmghK8VTdtdSdwiA", "Hkmz3cTikuFl1B6KOBT1", "vGUDjmUXG1FdXnR93yyK"];
+
+// Function to validate invitation code
+let validateInvitationCode = (invitationCode) => {
+  return validInvitationCodes.includes(invitationCode.trim());
+}
+
+let Registration = evt => {
+  evt.preventDefault();
+  if (!validateInvitationCode(invitation.value)) {
+    alert("Invalid invitation code!");
+    return;
+  }
+
+  // Proceed with registration
+  createUserWithEmailAndPassword(auth, email.value, password.value)
+    .then((credential) => {
+        const userRef = ref(database, 'UsersAuthList/' + credential.user.uid);
+        set(userRef, {
+            username: username.value,
+            email: email.value,
+            invitation: invitation.value,
+            phone: phone.value
+        }).then(() => {
+            console.log("User registered successfully:", credential.user.uid);
+            sessionStorage.setItem('user-info', JSON.stringify({
+                username: username.value,
+                invitation: invitation.value,
+                email: email.value,
+                phone: phone.value
+            }));
+            sessionStorage.setItem('user-creds', JSON.stringify(credential.user));
+            window.location.href = "index.html";
+        }).catch((error) => {
+            console.error("Error setting user data:", error);
+            alert(error.message);
+        });
+    }).catch((error) => {
+        console.error("Error registering user:", error);
+        alert(error.message);
+    });
+};
+
+
+
+
+
+let LoginUser = evt => {
+  evt.preventDefault();
+  signInWithEmailAndPassword(auth, login_email.value, login_password.value)
+    .then((credential) => {
+        const userRef = ref(database, 'UsersAuthList/' + credential.user.uid);
+        get(userRef).then((snapshot) => {
+            if (snapshot.exists()) {
+              console.log("User logged in:", credential.user.uid);
+              sessionStorage.setItem('user-info', JSON.stringify({
+                username: snapshot.val().username,
+                email: snapshot.val().email,
+                phone: snapshot.val().phone
+              }));
+              sessionStorage.setItem('user-creds', JSON.stringify(credential.user));
+              window.location.href = "index.html";
+            } else {
+              console.error("User data not found in database");
+              alert("User data not found in database");
+            }
+        }).catch((error) => {
+            console.error("Error getting user data:", error);
+            alert(error.message);
+        });
+    }).catch((error) => {
+        console.error("Error logging in:", error);
+        alert(error.message);
+    });
+};
+
+register_form.addEventListener('submit', Registration);
+login_form.addEventListener('submit', LoginUser);
+
+
+    </script>
+  <script>
+    const sign_in_btn = document.querySelector("#sign-in-btn");
+const sign_up_btn = document.querySelector("#sign-up-btn");
+const container = document.querySelector(".container");
+
+sign_up_btn.addEventListener("click", () => {
+  container.classList.add("sign-up-mode");
+});
+
+sign_in_btn.addEventListener("click", () => {
+  container.classList.remove("sign-up-mode");
+});
+  </script>
+
+</html>

@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>TravelWorld.com</title>
+</head>
+<body>
+    <div class="cursor-follower"></div>
+    <div class="main">
+    <nav>
+        <img src="/imges/tw_logo_marine.82c609e9.svg" />
+      </nav>
+      <div class="overlay"></div>
+      <button class="burger" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-close"></i>
+      </button>
+      <aside>
+        <img src="/imges/tw_logo_marine.82c609e9.svg" alt="" class="aside-logo">
+        <a href="login_singup_page.html">Login or Registration</a>
+        <a>Service</a>
+        <a>Certificate</a>
+        <a>Withdrawal</a>
+        <a>Deposit</a>
+        <a>Wallet</a>
+        <a>Even</a>
+        <a>FAQs</a>
+        <a>About</a>
+      </aside>
+       
+      <div class="slider">
+        <!-- slides -->
+        <div class="slider__slides">
+          <div class="slide s--active">
+            <div class="slide__inner">
+              <div class="slide__content">
+                <h2 class="slide__heading">Welcome to our site</h2>
+                <p class="slide__text">Enjoy your stay with us</p>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide__inner">
+              <div class="slide__content">
+                <h2 class="slide__heading">Lorem ipsum dolor sit.</h2>
+                <p class="slide__text">Lorem, ipsum dolor.</p>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide__inner">
+              <div class="slide__content">
+                <h2 class="slide__heading">Lorem ipsum dolor sit.</h2>
+                <p class="slide__text">Lorem, ipsum dolor.</p>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide__inner">
+              <div class="slide__content">
+                <h2 class="slide__heading">Lorem ipsum dolor sit.</h2>
+                <p class="slide__text">Lorem, ipsum dolor.</p>
+              </div>
+            </div>
+          </div>
+          <div class="slide s--prev">
+            <div class="slide__inner">
+              <div class="slide__content">
+                <h2 class="slide__heading">Lorem ipsum dolor sit.</h2>
+                <p class="slide__text">Lorem, ipsum dolor.</p>
+              </div>
+            </div>
+          </div>
+          <div class="slide s--prev">
+            <div class="slide__inner">
+              <div class="slide__content">
+                <h2 class="slide__heading">Lorem ipsum dolor sit.</h2>
+                <p class="slide__text">Lorem, ipsum dolor.</p>
+              </div>
+            </div>
+          </div>
+          <div class="slide s--prev">
+            <div class="slide__inner">
+              <div class="slide__content">
+                <h2 class="slide__heading">Lorem ipsum dolor sit.</h2>
+                <p class="slide__text">Lorem, ipsum dolor.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="parallax">
+            <div class="parallax__layer">
+              <div class="parallax_card">
+                <div class="parallax__image" style="background-image: url('https://m.jagranjosh.com/imported/images/E/Articles/maths2.jpg');"></div>
+                <div class="parallax__content">
+                  <h3 class=" parallax__heading">
+                    Mathematics
+                  </h3>
+                  <p>A subject which deals with.... Well Maths!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- slides end -->
+        <div class="slider__control">
+          <div class="slider__control-line"></div>
+          <div class="slider__control-line"></div>
+        </div>
+        <div class="slider__control slider__control--right m--right">
+          <div class="slider__control-line"></div>
+          <div class="slider__control-line"></div>
+        </div>
+      </div>
+        <div class="slide-container swiper">
+            <h1 class="card_heading">Follow the travel</h1>
+            <p class="card_description" style="margin-bottom: 24px;">The lorem text the section that contains header with having open functionality.</p>
+            <div class="slide-content">
+                <div class="card-wrapper swiper-wrapper">
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+                            <div class="card-image">
+                                <img src="/imges/card/1.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <svg viewbox="0 0 100 20">
+  <defs>
+    <linearGradient id="gradient">
+      <stop color="#000"/>
+    </linearGradient>
+    <pattern id="wave" x="0" y="-0.5" width="100%" height="100%" patternUnits="userSpaceOnUse">
+      <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)"> 
+        <animateTransform
+            attributeName="transform"
+            begin="0s"
+            dur="1.5s"
+            type="translate"
+            from="0,0"
+            to="40,0"
+            repeatCount="indefinite" />
+      </path>
+    </pattern>
+  </defs>
+  <text text-anchor="middle" x="50" y="15" font-size="19" fill="white" fill-opacity="0.1">lorem</text>
+  <text text-anchor="middle" x="50" y="15" font-size="19" fill="url(#wave)"  fill-opacity="1">lorem</text>
+</svg>
+                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                           <button class="card_btn_group">
+    <span class="btn-text-one">Hover me</span>
+    <span class="btn-text-two">Great!</span>
+</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+                            <div class="card-image">
+                                <img src="/imges/card/2.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <svg viewbox="0 0 100 20">
+  <defs>
+    <linearGradient id="gradient">
+      <stop color="#000"/>
+    </linearGradient>
+    <pattern id="wave" x="0" y="-0.5" width="100%" height="100%" patternUnits="userSpaceOnUse">
+      <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)"> 
+        <animateTransform
+            attributeName="transform"
+            begin="0s"
+            dur="1.5s"
+            type="translate"
+            from="0,0"
+            to="40,0"
+            repeatCount="indefinite" />
+      </path>
+    </pattern>
+  </defs>
+  <text text-anchor="middle" x="50" y="15" font-size="19" fill="white" fill-opacity="0.1">lorem</text>
+  <text text-anchor="middle" x="50" y="15" font-size="19" fill="url(#wave)"  fill-opacity="1">lorem</text>
+</svg>
+                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                           <button class="card_btn_group">
+    <span class="btn-text-one">Hover me</span>
+    <span class="btn-text-two">Great!</span>
+</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+                            <div class="card-image">
+                                <img src="/imges/card/3.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <svg viewbox="0 0 100 20">
+  <defs>
+    <linearGradient id="gradient">
+      <stop color="#000"/>
+    </linearGradient>
+    <pattern id="wave" x="0" y="-0.5" width="100%" height="100%" patternUnits="userSpaceOnUse">
+      <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)"> 
+        <animateTransform
+            attributeName="transform"
+            begin="0s"
+            dur="1.5s"
+            type="translate"
+            from="0,0"
+            to="40,0"
+            repeatCount="indefinite" />
+      </path>
+    </pattern>
+  </defs>
+  <text text-anchor="middle" x="50" y="15" font-size="19" fill="white" fill-opacity="0.1">lorem</text>
+  <text text-anchor="middle" x="50" y="15" font-size="19" fill="url(#wave)"  fill-opacity="1">lorem</text>
+</svg>
+                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                           <button class="card_btn_group">
+    <span class="btn-text-one">Hover me</span>
+    <span class="btn-text-two">Great!</span>
+</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+                            <div class="card-image">
+                                <img src="/imges/card/4.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <svg viewbox="0 0 100 20">
+  <defs>
+    <linearGradient id="gradient">
+      <stop color="#000"/>
+    </linearGradient>
+    <pattern id="wave" x="0" y="-0.5" width="100%" height="100%" patternUnits="userSpaceOnUse">
+      <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)"> 
+        <animateTransform
+            attributeName="transform"
+            begin="0s"
+            dur="1.5s"
+            type="translate"
+            from="0,0"
+            to="40,0"
+            repeatCount="indefinite" />
+      </path>
+    </pattern>
+  </defs>
+  <text text-anchor="middle" x="50" y="15" font-size="19" fill="white" fill-opacity="0.1">lorem</text>
+  <text text-anchor="middle" x="50" y="15" font-size="19" fill="url(#wave)"  fill-opacity="1">lorem</text>
+</svg>
+                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                           <button class="card_btn_group">
+    <span class="btn-text-one">Hover me</span>
+    <span class="btn-text-two">Great!</span>
+</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+                            <div class="card-image">
+                                <img src="/imges/card/5.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <svg viewbox="0 0 100 20">
+  <defs>
+    <linearGradient id="gradient">
+      <stop color="#000"/>
+    </linearGradient>
+    <pattern id="wave" x="0" y="-0.5" width="100%" height="100%" patternUnits="userSpaceOnUse">
+      <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)"> 
+        <animateTransform
+            attributeName="transform"
+            begin="0s"
+            dur="1.5s"
+            type="translate"
+            from="0,0"
+            to="40,0"
+            repeatCount="indefinite" />
+      </path>
+    </pattern>
+  </defs>
+  <text text-anchor="middle" x="50" y="15" font-size="19" fill="white" fill-opacity="0.1">lorem</text>
+  <text text-anchor="middle" x="50" y="15" font-size="19" fill="url(#wave)"  fill-opacity="1">lorem</text>
+</svg>
+                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                           <button class="card_btn_group">
+    <span class="btn-text-one">View</span>
+    <span class="btn-text-two">more</span>
+</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+                            <div class="card-image">
+                                <img src="/imges/card/6.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <svg viewbox="0 0 100 20">
+  <defs>
+    <linearGradient id="gradient">
+      <stop color="#000"/>
+    </linearGradient>
+    <pattern id="wave" x="0" y="-0.5" width="100%" height="100%" patternUnits="userSpaceOnUse">
+      <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)"> 
+        <animateTransform
+            attributeName="transform"
+            begin="0s"
+            dur="1.5s"
+            type="translate"
+            from="0,0"
+            to="40,0"
+            repeatCount="indefinite" />
+      </path>
+    </pattern>
+  </defs>
+  <text text-anchor="middle" x="50" y="15" font-size="19" fill="white" fill-opacity="0.1">lorem</text>
+  <text text-anchor="middle" x="50" y="15" font-size="19" fill="url(#wave)"  fill-opacity="1">lorem</text>
+</svg>
+                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                           <button class="card_btn_group">
+    <span class="btn-text-one">Hover me</span>
+    <span class="btn-text-two">Great!</span>
+</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+                            <div class="card-image">
+                                <img src="/imges/card/7.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <svg viewbox="0 0 100 20">
+  <defs>
+    <linearGradient id="gradient">
+      <stop color="#000"/>
+    </linearGradient>
+    <pattern id="wave" x="0" y="-0.5" width="100%" height="100%" patternUnits="userSpaceOnUse">
+      <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)"> 
+        <animateTransform
+            attributeName="transform"
+            begin="0s"
+            dur="1.5s"
+            type="translate"
+            from="0,0"
+            to="40,0"
+            repeatCount="indefinite" />
+      </path>
+    </pattern>
+  </defs>
+  <text text-anchor="middle" x="50" y="15" font-size="19" fill="white" fill-opacity="0.1">lorem</text>
+  <text text-anchor="middle" x="50" y="15" font-size="19" fill="url(#wave)"  fill-opacity="1">lorem</text>
+</svg>
+                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                           <button class="card_btn_group">
+    <span class="btn-text-one">Hover me</span>
+    <span class="btn-text-two">Great!</span>
+</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+                            <div class="card-image">
+                                <img src="/imges/card/8.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <svg viewbox="0 0 100 20">
+  <defs>
+    <linearGradient id="gradient">
+      <stop color="#000"/>
+    </linearGradient>
+    <pattern id="wave" x="0" y="-0.5" width="100%" height="100%" patternUnits="userSpaceOnUse">
+      <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)"> 
+        <animateTransform
+            attributeName="transform"
+            begin="0s"
+            dur="1.5s"
+            type="translate"
+            from="0,0"
+            to="40,0"
+            repeatCount="indefinite" />
+      </path>
+    </pattern>
+  </defs>
+  <text text-anchor="middle" x="50" y="15" font-size="19" fill="white" fill-opacity="0.1">lorem</text>
+  <text text-anchor="middle" x="50" y="15" font-size="19" fill="url(#wave)"  fill-opacity="1">lorem</text>
+</svg>
+                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                           <button class="card_btn_group">
+    <span class="btn-text-one">Hover me</span>
+    <span class="btn-text-two">Great!</span>
+</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+                            <div class="card-image">
+                                <img src="/imges/card/9.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <svg viewbox="0 0 100 20">
+  <defs>
+    <linearGradient id="gradient">
+      <stop color="#000"/>
+    </linearGradient>
+    <pattern id="wave" x="0" y="-0.5" width="100%" height="100%" patternUnits="userSpaceOnUse">
+      <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)"> 
+        <animateTransform
+            attributeName="transform"
+            begin="0s"
+            dur="1.5s"
+            type="translate"
+            from="0,0"
+            to="40,0"
+            repeatCount="indefinite" />
+      </path>
+    </pattern>
+  </defs>
+  <text text-anchor="middle" x="50" y="15" font-size="19" fill="white" fill-opacity="0.1">lorem</text>
+  <text text-anchor="middle" x="50" y="15" font-size="19" fill="url(#wave)"  fill-opacity="1">lorem</text>
+</svg>
+                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                           <button class="card_btn_group">
+    <span class="btn-text-one">Hover me</span>
+    <span class="btn-text-two">Great!</span>
+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="accommodation_section">
+            <h2 style=" padding: 13px 81px; font-size: 32px; color: #9fb2ca;">Our Accommodation World</h2>
+            <div class="accommodation-images">
+                <div class="accommodation-card">
+                    <img class="accommodation-image" src="/imges/tw-img-hero-web-travelbookings.png" alt="Apartments">
+                    <p class="accommodation-label">Apartments</p>
+                </div>
+                <div class="accommodation-card">
+                    <img class="accommodation-image" src="/imges/tw-img-hero-web-flighthotel-.jpg" alt="Beach resorts">
+                    <p class="accommodation-label">Beach resorts</p>
+                </div>
+                <div class="accommodation-card">
+                    <img class="accommodation-image" src="/imges/tw-img-hero-web-flighthotel-.jpg" alt="Beach resorts">
+                    <p class="accommodation-label">Beach resorts</p>
+                </div>
+                <div class="accommodation-card">
+                    <img class="accommodation-image" src="/imges/tw-img-hero-web-flighthotel-.jpg" alt="Beach resorts">
+                    <p class="accommodation-label">Beach resorts</p>
+                </div>
+                <div class="accommodation-card">
+                    <img class="accommodation-image" src="/imges/tw-img-hero-web-flighthotel-.jpg" alt="Beach resorts">
+                    <p class="accommodation-label">Beach resorts</p>
+                </div>
+                <div class="accommodation-card">
+                    <img class="accommodation-image" src="/imges/tw-img-hero-web-flighthotel-.jpg" alt="Beach resorts">
+                    <p class="accommodation-label">Beach resorts</p>
+                </div>
+                <div class="accommodation-card">
+                    <img class="accommodation-image" src="/imges/tw-img-hero-web-flighthotel-.jpg" alt="Beach resorts">
+                    <p class="accommodation-label">Beach resorts</p>
+                </div>
+            </div>
+        </div>
+        <h2 style=" padding: 20px 81px; font-size: 32px; color: #9fb2ca;">Popular Destinations</h2>
+        <div class="css-1k66z4z">
+            <div class="css-23xr6r">
+                <button class="css-37093z" type="button" id="test_id=city_Prague">
+                    <div class="css-ifw2n4">
+                        <div class="css-1n5xxcx">
+                            <img class="css-wb2u6d" src="https://res.cloudinary.com/roombonus/image/upload/production/backend-managed/cities/prague.png" alt="Prague">
+                        </div>
+                    </div>
+                    <div class="css-ge8d74">
+                        <div class="css-alrn9e">
+                            <span class="text css-dks8nb" >paragram   <br>  ⭐⭐⭐ <br>
+                                <span>€20</span></span>
+                        </div>
+                    
+                    </div>
+                </button>
+            </div>
+            <div class="css-7ojv0r">
+                <button class="css-37093z" type="button" id="test_id=city_Warsaw">
+                    <div class="css-ifw2n4">
+                        <div class="css-1n5xxcx">
+                            <img class="css-wb2u6d" src="https://res.cloudinary.com/roombonus/image/upload/production/backend-managed/cities/warsaw.png" alt="Warsaw">
+                        </div>
+                    </div>
+                    <div class="css-ge8d74">
+                        <div class="css-alrn9e">
+                            <span class="text css-dks8nb" >Warsaw    <br>  ⭐⭐⭐ <br>
+                            <span>€20</span></span>
+                        
+                        </div>
+                    </div>
+                </button>
+            </div>
+            <div class="css-7ojv0r">
+                <button class="css-37093z" type="button" id="test_id=city_Warsaw">
+                    <div class="css-ifw2n4">
+                        <div class="css-1n5xxcx">
+                            <img class="css-wb2u6d" src="https://res.cloudinary.com/roombonus/image/upload/production/backend-managed/cities/warsaw.png" alt="Warsaw">
+                        </div>
+                    </div>
+                    <div class="css-ge8d74">
+                        <div class="css-alrn9e">
+                            <span class="text css-dks8nb" >Warsaw    <br>  ⭐⭐⭐ <br>
+                            <span>€20</span></span>
+                        
+                        </div>
+                    </div>
+                </button>
+            </div>
+            <div class="css-7ojv0r">
+                <button class="css-37093z" type="button" id="test_id=city_Warsaw">
+                    <div class="css-ifw2n4">
+                        <div class="css-1n5xxcx">
+                            <img class="css-wb2u6d" src="https://res.cloudinary.com/roombonus/image/upload/production/backend-managed/cities/warsaw.png" alt="Warsaw">
+                        </div>
+                    </div>
+                    <div class="css-ge8d74">
+                        <div class="css-alrn9e">
+                            <span class="text css-dks8nb" >Warsaw    <br>  ⭐⭐⭐ <br>
+                            <span>€20</span></span>
+                        
+                        </div>
+                    </div>
+                </button>
+            </div>
+            <div class="css-7ojv0r">
+                <button class="css-37093z" type="button" id="test_id=city_Warsaw">
+                    <div class="css-ifw2n4">
+                        <div class="css-1n5xxcx">
+                            <img class="css-wb2u6d" src="https://res.cloudinary.com/roombonus/image/upload/production/backend-managed/cities/warsaw.png" alt="Warsaw">
+                        </div>
+                    </div>
+                    <div class="css-ge8d74">
+                        <div class="css-alrn9e">
+                            <span class="text css-dks8nb" >Warsaw    <br>  ⭐⭐⭐ <br>
+                            <span>€20</span></span>
+                        
+                        </div>
+                    </div>
+                </button>
+            </div>
+            <div class="css-7ojv0r">
+                <button class="css-37093z" type="button" id="test_id=city_Warsaw">
+                    <div class="css-ifw2n4">
+                        <div class="css-1n5xxcx">
+                            <img class="css-wb2u6d" src="https://res.cloudinary.com/roombonus/image/upload/production/backend-managed/cities/warsaw.png" alt="Warsaw">
+                        </div>
+                    </div>
+                    <div class="css-ge8d74">
+                        <div class="css-alrn9e">
+                            <span class="text css-dks8nb" >Warsaw    <br>  ⭐⭐⭐ <br>
+                            <span>€20</span></span>
+                        
+                        </div>
+                    </div>
+                </button>
+            </div>
+            <div class="css-7ojv0r">
+                <button class="css-37093z" type="button" id="test_id=city_Warsaw">
+                    <div class="css-ifw2n4">
+                        <div class="css-1n5xxcx">
+                            <img class="css-wb2u6d" src="https://res.cloudinary.com/roombonus/image/upload/production/backend-managed/cities/warsaw.png" alt="Warsaw">
+                        </div>
+                    </div>
+                    <div class="css-ge8d74">
+                        <div class="css-alrn9e">
+                            <span class="text css-dks8nb" >Warsaw    <br>  ⭐⭐⭐ <br>
+                            <span>€20</span></span>
+                        
+                        </div>
+                    </div>
+                </button>
+            </div>
+            <div class="css-7ojv0r">
+                <button class="css-37093z" type="button" id="test_id=city_Warsaw">
+                    <div class="css-ifw2n4">
+                        <div class="css-1n5xxcx">
+                            <img class="css-wb2u6d" src="https://res.cloudinary.com/roombonus/image/upload/production/backend-managed/cities/warsaw.png" alt="Warsaw">
+                        </div>
+                    </div>
+                    <div class="css-ge8d74">
+                        <div class="css-alrn9e">
+                            <span class="text css-dks8nb" >Warsaw    <br>  ⭐⭐⭐ <br>
+                            <span>€20</span></span>
+                        
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <section class="footer">
+            <footer class="top">
+              <img src="/imges/tw_logo_marine.82c609e9.svg" />
+              <div class="links">
+                <div>
+                  <h2>Platform</h2>
+                  <a href="#" class="footer_link">Directus Core</a>
+                  <a href="#" class="footer_link">Open Data Platform</a>
+                  <a href="#" class="footer_link">Feature List</a>
+                  <a href="#" class="footer_link">Road Map</a>
+                  <a href="#" class="footer_link">Marketplace</a>
+                </div>
+                <div>
+                  <h2>Cloud</h2>
+                  <a href="#" class="footer_link">Dashboard</a>
+                  <a href="#" class="footer_link">Register</a>
+                  <a href="#" class="footer_link">Pricing</a>
+                  <a href="#" class="footer_link">System Status</a>
+                  <a href="#" class="footer_link">Partner Program</a>
+                </div>
+              </div>
+            </footer>
+            <footer class="bottom">
+              <div class="legal">
+                <span> © 2024 <a href="index.html" class="footer_link">Travel World</a> All rights reserved </span>
+                <a href="#" class="footer_link"> License </a>
+                <a href="#" class="footer_link"> Terms </a>
+                <a href="#" class="footer_link"> Privacy </a>
+              </div>
+              <div class="links">
+                <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                <a href=""><i class="fa-brands fa-telegram"></i></a>
+              </div>
+            </footer>
+          </section>
+   
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    function toggleMenu() {
+  document.body.classList.toggle('open');
+}
+</script>
+<script>
+    let userCreds = JSON.parse(sessionStorage.getItem("user-creds"));
+    let userInfo = JSON.parse(sessionStorage.getItem("user-info"));
+
+    let signoutButton = document.getElementById("signoutButton");
+
+    let showLoginRegisterButton = () => {
+        loginRegBtn.style.display = "block";
+        signoutButton.style.display = "none";
+    };
+
+    let showSignOutButton = () => {
+        loginRegBtn.style.display = "none";
+        signoutButton.style.display = "block";
+    };
+
+    let singOut = () => {
+        sessionStorage.removeItem("user-creds");
+        sessionStorage.removeItem("user-info");
+        showLoginRegisterButton();
+        alert("Logged out successfully.");
+        window.location.href = "login_signup_page.html";
+    };
+
+    let checkUserCredentials = () => {
+        if (!userCreds) {
+            showLoginRegisterButton();
+            alert("Please log in or register.");
+        } else {
+            showSignOutButton();
+        }
+    };
+
+    window.addEventListener("load", checkUserCredentials);
+    signoutButton.addEventListener("click", singOut);
+</script>
+<script src="script.js"></script>
+</html>
